@@ -1,14 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap");
+@import url("./theme.css");
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: "Source Sans Pro", sans-serif;
+  background-color: var(--first-color);
+}
+
+main {
+  min-height: 200vh;
 }
 
 .navbar {
   margin: 0;
+  position: sticky;
+  background-color: var(--third-color);
+  top: 0;
 }
 
 .navbar-links {
@@ -36,13 +45,16 @@ body {
 .navbar-link-item > a {
   border-radius: 50%;
   text-decoration: none;
-  color: black;
-  padding: 0.5rem;
+  color: var(--icon-color);
+  padding: 1rem;
+  font-size: 2rem;
   transition: 300ms;
 }
 
 .navbar-link-item > a:hover {
+  background-color: var(--first-color);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: var(--third-color);
 }
 
 .logo-box {
@@ -50,7 +62,7 @@ body {
   align-items: baseline;
   text-decoration: none;
   margin-left: 2rem;
-  color: #000;
+  color: var(--primary-text-color);
   transition: 100ms;
 }
 
@@ -59,27 +71,28 @@ body {
 }
 
 .logo {
-  height: 10vh;
+  height: 3.5rem;
 }
 
-.website-title {
+.logo-title {
   font-family: "Dancing Script", cursive;
   font-weight: normal;
   font-size: 3.5rem;
 }
 
 header {
-  background-image: url("../images/header-background.jpg");
+  background-color: var(--third-color);
   background-size: cover;
   background-repeat: no-repeat;
+  color: var(--primary-text-color);
 }
 
 .header-banner {
   min-height: 60vh;
 }
 
-.header-banner-info {
-  height: 50vh;
+.header-banner-content {
+  margin: 2rem;
 }
 
 .header-title {
@@ -94,12 +107,41 @@ header {
   margin-top: 3rem;
 }
 
-.row {
-  display: flex;
+.header-button {
+  border: 0;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: var(--first-color);
+  color: var(--third-color);
+  border: 2px solid var(--first-color);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 200ms;
 }
 
-.col {
+.header-button:hover {
+  background-color: var(--third-color);
+  color: var(--primary-color);
+  border: 2px solid var(--first-color);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.banner-image {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.col-2 {
   width: 50%;
+}
+
+main {
+  color: var(--secondary-text-color);
 }
 
 @media screen and (max-width: 800px) {
@@ -107,10 +149,8 @@ header {
   body {
     font-size: 12px;
   }
-  .row {
-    flex-direction: column;
-  }
-  .col {
+
+  .col-2 {
     width: 100%;
   }
 }

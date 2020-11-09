@@ -44,9 +44,9 @@ main {
 .navbar-links {
   list-style: none;
   margin: 0;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   display: flex;
-  align-items: baseline;
+  align-items: center;
 }
 
 .navbar-links > li:nth-child(1) {
@@ -101,7 +101,7 @@ main {
 .logo-title {
   font-family: "Dancing Script", cursive;
   font-weight: normal;
-  font-size: 3.5rem;
+  font-size: 3rem;
   padding: 0;
   margin: 0;
 }
@@ -115,6 +115,7 @@ header {
 
 .header-banner {
   min-height: 60vh;
+  padding-bottom: 1.5rem;
 }
 
 .header-banner-content {
@@ -151,6 +152,11 @@ header {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.banner-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .banner-image {
   width: 100%;
   padding: 0;
@@ -180,5 +186,11 @@ main {
 
   .col-2 {
     width: 100%;
+  }
+
+  .banner-image {
+    width: 50%;
+    border-radius: 50%;
+    align-self: centers;
   }
 }

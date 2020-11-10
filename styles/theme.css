@@ -2,7 +2,7 @@
 :root {
   --first-color: #0e2431;
   --second-color: #32a7fa;
-  --third-color: #fdc43c;
+  --third-color: #fdc323;
   --fourth-color: #e8d5b7;
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
@@ -19,7 +19,7 @@
 }
 
 .third-color {
-  background: #fdc43c;
+  background: #fdc323;
 }
 
 .fourth-color {
